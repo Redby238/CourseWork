@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|c:\\users\\justin\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\c#\\wpf-loginform\\dbsettings\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|solutionrelative:wpf-loginform\\dbsettings\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\wpf-loginform\\dbsettings\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|solutionrelative:wpf-loginform\\dbsettings\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|c:\\users\\justin\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\c#\\wpf-loginform\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|solutionrelative:wpf-loginform\\view\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|c:\\users\\justin\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\c#\\wpf-loginform\\view\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|solutionrelative:wpf-loginform\\view\\registerview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|c:\\users\\justin\\desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\c#\\wpf-loginform\\view\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\CourseWorkDBB.csproj|solutionrelative:wpf-loginform\\view\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\wpf-loginform\\model\\usermodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|solutionrelative:wpf-loginform\\model\\usermodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\wpf-loginform\\view\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|solutionrelative:wpf-loginform\\view\\registerview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\wpf-loginform\\users\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B88027D1-FD36-4AA4-8FE3-1803A15C3EF2}|WPF-LoginForm\\WPF-LoginForm.csproj|solutionrelative:wpf-loginform\\users\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "RelativeToolTip": "WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:52:10.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\View\\RegisterView.xaml.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml.cs",
+              "RelativeToolTip": "WPF-LoginForm\\View\\RegisterView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:52:10.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterView.xaml",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\View\\RegisterView.xaml",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml",
+              "RelativeToolTip": "WPF-LoginForm\\View\\RegisterView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-13T20:52:10.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\LoginView.xaml.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\View\\LoginView.xaml.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\LoginView.xaml.cs",
+              "RelativeToolTip": "WPF-LoginForm\\View\\LoginView.xaml.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwCMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T20:06:48.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserModels.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\Model\\UserModels.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\Model\\UserModels.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\Model\\UserModels.cs",
+              "RelativeToolTip": "WPF-LoginForm\\Model\\UserModels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T13:45:26.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\Users\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\Users\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\Users\\ApplicationUser.cs",
+              "RelativeToolTip": "WPF-LoginForm\\Users\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T13:36:41.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterView.xaml",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\View\\RegisterView.xaml",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\View\\RegisterView.xaml",
+              "RelativeToolTip": "WPF-LoginForm\\View\\RegisterView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-13T13:28:57.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "ToolTip": "C:\\Users\\Justin\\Desktop\\\u043A\u0443\u0440\u0441\u043E\u0432\u0430\u044F\\C#\\WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "RelativeToolTip": "WPF-LoginForm\\DbSettings\\AuthenticationService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAcwB0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T12:43:57.582Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
