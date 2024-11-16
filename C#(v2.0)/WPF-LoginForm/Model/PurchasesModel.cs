@@ -14,7 +14,8 @@ namespace WPF_LoginForm.Model
 
         public int Quantity { get; set; }  
 
-        public decimal Price { get; set; } 
+        public decimal Price { get; set; }
+        public Supplier Supplier { get; internal set; }
 
         public DateTime PurchaseDate = DateTime.Now;
     }

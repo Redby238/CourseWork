@@ -1,0 +1,152 @@
+﻿<Window x:Class="WPF_LoginForm.View.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление пользователя" Height="793" Width="877"
+        WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="Transparent" AllowsTransparency="True">
+
+    <Border CornerRadius="12">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/back-image.jpg" Stretch="None"/>
+        </Border.Background>
+
+        <Border BorderThickness="2" Opacity="0.95">
+            <Border.BorderBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#462AD8" Offset="0"/>
+                    <GradientStop Color="#DA34AE" Offset="0.75"/>
+                    <GradientStop Color="#8A16C1" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.BorderBrush>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                    <GradientStop Color="#060531" Offset="0"/>
+                    <GradientStop Color="#1B1448" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid>
+                <!-- Define rows for the title and content -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Верхняя панель с заголовком -->
+                <Grid Height="40" Background="#1B1448" Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Добавление пользователя"
+                               Foreground="White"
+                               FontSize="14"
+                               FontFamily="Montserrat"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+
+                    <!-- Кнопка свернуть окно -->
+                    <Button x:Name="btnMinimize"
+                            BorderThickness="0"
+                            Content="-"
+                            Foreground="White"
+                            FontSize="14"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#28AEED"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#278BEF"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <!-- Кнопка закрыть окно -->
+                    <Button x:Name="btnClose"
+                            BorderThickness="0"
+                            Content="X"
+                            Foreground="White"
+                            FontSize="14"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Click="btnClose_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#DA34AE"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#C62DAE"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="18" Height="18"
+                                        CornerRadius="9"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+
+                <!-- Основной контент -->
+                <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
+                    <!-- Поля для ввода -->
+                    <TextBlock Text="Имя:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <TextBox x:Name="FirstNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1"/>
+
+                    <TextBlock Text="Фамилия:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <TextBox x:Name="LastNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1"/>
+
+                    <TextBlock Text="Электронная почта" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <TextBox x:Name="EmailTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1" />
+
+                    <TextBlock Text="Роль:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <ComboBox x:Name="RoleComboBox" Width="400" Height="30" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1" FontFamily="Montserrat">
+                        <ComboBoxItem Content="Admin"/>
+                        <ComboBoxItem Content="Operator"/>
+                        <ComboBoxItem Content="User"/>
+                    </ComboBox>
+
+                    <!-- Кнопка добавления -->
+                    <Button Content="Добавить" Width="200" Height="40" Background="#462AD8" Foreground="White" FontSize="14" FontFamily="Montserrat" Click="AddButton_Click" Margin="0,20"/>
+
+                    <!-- ListBox для отображения списка пользователей -->
+                    <TextBlock Text="Список пользователей:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,20"/>
+                    <ListBox x:Name="UserListBox"
+                             Width="400"
+                             Height="200"
+                             Background="#1B1448"
+                             Foreground="White"
+                             BorderBrush="#DA34AE"
+                             BorderThickness="1">
+                    </ListBox>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

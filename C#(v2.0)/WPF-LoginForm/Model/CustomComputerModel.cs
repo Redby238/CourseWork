@@ -8,5 +8,7 @@ namespace WPF_LoginForm.Model
         public int CustomerID { get; set; }
         public Customer Customer { get; set; }
         public ICollection<CustomComputerComponent> Components { get; set; }
+        public string Name { get; internal set; }
+        public string Specifications { get; internal set; }
     }
 }

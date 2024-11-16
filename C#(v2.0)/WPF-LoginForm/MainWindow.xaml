@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_LoginForm.View"
         mc:Ignorable="d"
         Title="Главное окно"
-        Height="600" Width="900"
+        Height="750" Width="988"
         WindowStyle="None"
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
@@ -18,7 +18,7 @@
             <ImageBrush ImageSource="/Images/back-image.jpg" Stretch="None"/>
         </Border.Background>
 
-        <Border CornerRadius="10" BorderThickness="2" Opacity="0.95">
+        <Border CornerRadius="10" BorderThickness="2" Opacity="0.95" Margin="0,-20,0,0">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#462AD8" Offset="0"/>
@@ -51,11 +51,12 @@
                                Margin="10,0,0,0"/>
 
                     <!-- Кнопка свернуть окно -->
+
                     <Button x:Name="btnMinimize"
                             BorderThickness="0"
                             Content="-"
                             Foreground="White"
-                            FontSize="14"
+                            FontSize="16"
                             FontFamily="Montserrat"
                             Cursor="Hand"
                             Grid.Column="1"
@@ -84,14 +85,14 @@
 
                     <!-- Кнопка закрыть окно -->
                     <Button x:Name="btnClose"
-                            BorderThickness="0"
-                            Content="X"
-                            Foreground="White"
-                            FontSize="14"
-                            FontFamily="Montserrat"
-                            Cursor="Hand"
-                            Grid.Column="2"
-                            Click="btnClose_Click">
+        BorderThickness="0"
+        Content="X"
+        Foreground="White"
+        FontSize="12"
+        FontFamily="Montserrat"
+        Cursor="Hand"
+        Grid.Column="2"
+        Click="btnClose_Click">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Background" Value="#DA34AE"/>
@@ -105,10 +106,10 @@
                         <Button.Template>
                             <ControlTemplate TargetType="Button">
                                 <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
+                    CornerRadius="9"
+                    Background="{TemplateBinding Background}">
                                     <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
+                                  HorizontalAlignment="Center"/>
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
@@ -133,6 +134,28 @@
                                FontFamily="Montserrat"
                                Margin="0,5,0,0"/>
 
+                   
+                    <ComboBox x:Name="queryComboBox"
+                              HorizontalAlignment="Stretch"
+                              VerticalAlignment="Top"
+                              Margin="0,10"
+                              Background="#1B1448"
+                              Foreground="Black" 
+                              BorderBrush="#DA34AE"
+                              BorderThickness="1"
+                              FontFamily="Montserrat"
+                              FontSize="14">
+                        <ComboBoxItem Content="Загрузить поставщиков и продукцию" />
+                        <ComboBoxItem Content="Клиенты, покупающие продукцию" />
+                        <ComboBoxItem Content="Ремонты по гарантии" />
+                        <ComboBoxItem Content="Максимальная выручка за месяц" />
+                        <ComboBoxItem Content="Доступные компоненты по цене" />
+                        <ComboBoxItem Content="Поставщики с частыми ремонтами" />
+                        <ComboBoxItem Content="Индивидуальные компоненты" />
+                        <ComboBoxItem Content="Продукция за период" />
+                        <ComboBoxItem Content="Договоры по поставщикам" />
+                    </ComboBox>
+
                     <!-- Список для отображения данных -->
                     <ListBox x:Name="listBox"
                              HorizontalAlignment="Stretch"
@@ -145,8 +168,8 @@
                              BorderThickness="1">
                     </ListBox>
 
-                    <!-- Кнопка для загрузки поставщиков и продукции -->
-                    <Button Content="Загрузить поставщиков и продукцию"
+                    <!-- Кнопка для загрузки данных в зависимости от выбора из ComboBox -->
+                    <Button Content="Выполнить запрос"
                             HorizontalAlignment="Center"
                             VerticalAlignment="Top"
                             Background="#462AD8"
@@ -156,7 +179,36 @@
                             Margin="0,10"
                             Width="200"
                             Height="40"
-                            Click="btnGetSuppliersAndProducts_Click"/>
+                            Click="btnExecuteQuery_Click"/>
+
+                    <!-- Кнопка для перехода в админ-панель -->
+                    <Button x:Name="btnGoToAdminPanel"
+                        Content="Перейти в админ-панель"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Top"
+                            Background="#DA34AE"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Margin="0,20"
+                            Width="200"
+                            Height="40"
+                            Click="btnGoToAdminPanel_Click"/>
+                    <Button x:Name="btnGoToViewTables"
+        Content="Перейти в окно с таблицами"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Top"
+        Background="#DA34AE"
+        Foreground="White"
+        FontSize="16"
+        FontFamily="Montserrat"
+        Margin="0,20"
+        Width="200"
+        Height="40"
+        Click="btnGoToViewTables_Click"/>
+
+
+
                 </StackPanel>
             </Grid>
         </Border>

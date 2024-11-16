@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Input;
+using WPF_LoginForm.DbSettings;
 using WPF_LoginForm.Services;
 
 namespace WPF_LoginForm.View
 {
     public partial class LoginView : Window
     {
+        private readonly ApplicationDbContext _context;
+
         public LoginView()
         {
             InitializeComponent();
+          
+            _context = new ApplicationDbContext(); 
         }
 
         // Обработчик перемещения окна
@@ -54,7 +59,7 @@ namespace WPF_LoginForm.View
                 MessageBox.Show("Вход выполнен успешно! Добро пожаловать.", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Передаем данные в MainWindow
-                MainWindow mainWindow = new MainWindow(user.UserName, userRole);
+                MainWindow mainWindow = new MainWindow(_context, userName, userRole);
                 mainWindow.Show();
                 this.Close();
             }

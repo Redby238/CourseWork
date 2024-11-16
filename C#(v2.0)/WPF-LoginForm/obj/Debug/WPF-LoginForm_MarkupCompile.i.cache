@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Justin\Desktop\курсовая\WPF-LoginForm\obj\Debug\
+C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\
 WPF_LoginForm
 none
 false
 DEBUG;TRACE
-C:\Users\Justin\Desktop\курсовая\WPF-LoginForm\App.xaml
-3842339365
+C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\App.xaml
+6952310989
 
-31-1996369464
-651245616169
-MainWindow.xaml;View\LoginView.xaml;View\RegisterView.xaml;
+49-1955939847
+22-371911052
+MainWindow.xaml;View\AddUserWindow.xaml;View\AdminPanelWindow.xaml;View\LoginView.xaml;View\RegisterView.xaml;View\ViewTablesWindow.xaml;
 
 False
 

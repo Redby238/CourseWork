@@ -1,0 +1,154 @@
+﻿<Window x:Class="WPF_LoginForm.View.ViewTablesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Просмотр таблиц" Height="450" Width="800">
+    <Window.Background>
+        <!-- Градиентный фон: чёрно-фиолетовый с прозрачностью -->
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#66000000" Offset="0" />
+            <!-- Полупрозрачный чёрный -->
+            <GradientStop Color="#99008080" Offset="1" />
+            <!-- Полупрозрачный фиолетовый -->
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <TabControl Name="TabControl" Margin="10">
+            <!-- Поставщики -->
+            <TabItem Header="Поставщики">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterSuppliersTextBlock" Text="Поиск по компании..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterSuppliersTextBox" Width="200" Margin="5" TextChanged="FilterSuppliersTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddSupplierButton" Content="Добавить" Click="AddSupplierButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteSupplierButton" Content="Удалить" Click="DeleteSupplierButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridSuppliers" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Продукты -->
+            <TabItem Header="Продукты">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterProductsTextBlock" Text="Поиск по продукту..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterProductsTextBox" Width="200" Margin="5" TextChanged="FilterProductsTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddProductButton" Content="Добавить" Click="AddProductButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteProductButton" Content="Удалить" Click="DeleteProductButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridProducts" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Заказы -->
+            <TabItem Header="Заказы">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterOrdersTextBlock" Text="Поиск по заказу..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterOrdersTextBox" Width="200" Margin="5" TextChanged="FilterOrdersTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddOrderButton" Content="Добавить" Click="AddOrderButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteOrderButton" Content="Удалить" Click="DeleteOrderButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridOrders" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Ремонты -->
+            <TabItem Header="Ремонты">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterRepairsTextBlock" Text="Поиск по ремонту..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterRepairsTextBox" Width="200" Margin="5" TextChanged="FilterRepairsTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddRepairButton" Content="Добавить" Click="AddRepairButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteRepairButton" Content="Удалить" Click="DeleteRepairButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridRepairs" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Клиенты -->
+            <TabItem Header="Клиенты">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterCustomersTextBlock" Text="Поиск по клиенту..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterCustomersTextBox" Width="200" Margin="5" TextChanged="FilterCustomersTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddCustomerButton" Content="Добавить" Click="AddCustomerButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteCustomerButton" Content="Удалить" Click="DeleteCustomerButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridCustomers" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Договоры -->
+            <TabItem Header="Договоры">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterContractsTextBlock" Text="Поиск по договору..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterContractsTextBox" Width="200" Margin="5" TextChanged="FilterContractsTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddContractButton" Content="Добавить" Click="AddContractButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteContractButton" Content="Удалить" Click="DeleteContractButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridContracts" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Работники -->
+            <TabItem Header="Работники">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterEmployeesTextBlock" Text="Поиск по работнику..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterEmployeesTextBox" Width="200" Margin="5" TextChanged="FilterEmployeesTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddEmployeeButton" Content="Добавить" Click="AddEmployeeButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteEmployeeButton" Content="Удалить" Click="DeleteEmployeeButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridEmployees" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Кастомные компьютеры -->
+            <TabItem Header="Кастомные компьютеры">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterCustomComputersTextBlock" Text="Поиск по компьютеру..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterCustomComputersTextBox" Width="200" Margin="5" TextChanged="FilterCustomComputersTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddCustomComputerButton" Content="Добавить" Click="AddCustomComputerButton_Click" Margin="5"/>
+                        <Button x:Name="DeleteCustomComputerButton" Content="Удалить" Click="DeleteCustomComputerButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridCustomComputers" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Покупки -->
+            <TabItem Header="Покупки">
+                <StackPanel>
+                    <Grid>
+                        <TextBlock Name="FilterPurchasesTextBlock" Text="Поиск по покупке..." VerticalAlignment="Center" Margin="5" Foreground="Gray" IsHitTestVisible="False" />
+                        <TextBox Name="FilterPurchasesTextBox" Width="200" Margin="5" TextChanged="FilterPurchasesTextBox_TextChanged"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" Margin="5">
+                        <Button x:Name="AddPurchaseButton" Content="Добавить" Click="AddPurchaseButton_Click" Margin="5"/>
+                        <Button x:Name="DeletePurchaseButton" Content="Удалить" Click="DeletePurchaseButton_Click" Margin="5"/>
+                    </StackPanel>
+                    <DataGrid Name="DataGridPurchases" AutoGenerateColumns="True" Margin="5"/>
+                </StackPanel>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

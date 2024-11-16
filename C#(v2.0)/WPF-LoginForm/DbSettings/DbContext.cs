@@ -19,7 +19,7 @@ namespace WPF_LoginForm.DbSettings
         public DbSet<Repair> Repairs { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<CustomComputer> CustomComputers { get; set; }
-        public DbSet<CustomComputerComponent> CustomComputerComponents { get; set; }
+        public DbSet<CustomComputerComponent> CustomComputerComponent { get; set; }
         public DbSet<Contract> Contracts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -13,3 +13,4 @@ namespace WPF_LoginForm.Model
         public string Role { get; set; } 
     }
 }
+// Тестовая модель(не используеться, в случае если "ApplicationUser упадёт каким-то образом,должны браться параметры из этой модели)
