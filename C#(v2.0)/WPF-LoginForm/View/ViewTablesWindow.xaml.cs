@@ -20,6 +20,7 @@ namespace WPF_LoginForm.View
             _context = context;
             _currentUserRole = role;
             LoadData();
+            ConfigureButtonInteractivity();
         }
 
         private void LoadData()
@@ -36,29 +37,47 @@ namespace WPF_LoginForm.View
             //  DataGridComponents.ItemsSource = _context.CustomComputerComponent.ToList();
             DataGridPurchases.ItemsSource = _context.Purchases.ToList();
 
-            // Условная видимость кнопок добавления/удаления в зависимости от роли
-            SetButtonVisibility();
+         
+         
         }
 
-        private void SetButtonVisibility()
+        private bool HasPermission()
         {
-            if (_currentUserRole == "Admin" || _currentUserRole == "Owner")
+            if (_currentUserRole == "Operator")
             {
-                AddSupplierButton.Visibility = Visibility.Visible;
-                DeleteSupplierButton.Visibility = Visibility.Visible;
-                AddProductButton.Visibility = Visibility.Visible;
-                DeleteProductButton.Visibility = Visibility.Visible;
-                AddOrderButton.Visibility = Visibility.Visible;
-                DeleteOrderButton.Visibility = Visibility.Visible;
-                AddRepairButton.Visibility = Visibility.Visible;
-                DeleteRepairButton.Visibility = Visibility.Visible;
-                AddCustomerButton.Visibility = Visibility.Visible;
-                DeleteCustomerButton.Visibility = Visibility.Visible;
-                AddContractButton.Visibility = Visibility.Visible;
-                DeleteContractButton.Visibility = Visibility.Visible;
-                // Добавить кнопки для других таблиц аналогично
+                return true;
             }
+            return false; // Возвращаем false для всех других ролей
         }
+
+        private void ConfigureButtonInteractivity()
+        {
+           
+
+            if (_currentUserRole == "Operator")
+            {
+                AddSupplierButton.IsEnabled = false;
+                DeleteSupplierButton.IsEnabled = false;
+                AddProductButton.IsEnabled = false;
+                DeleteProductButton.IsEnabled = false;
+                AddOrderButton.IsEnabled = false;
+                DeleteOrderButton.IsEnabled = false;
+                AddRepairButton.IsEnabled = false;
+                DeleteRepairButton.IsEnabled = false;
+                AddCustomerButton.IsEnabled = false;
+                DeleteCustomerButton.IsEnabled = false;
+                AddContractButton.IsEnabled = false;
+                DeleteContractButton.IsEnabled = false;
+                AddEmployeeButton.IsEnabled = false;
+                DeleteEmployeeButton.IsEnabled = false;
+                AddCustomComputerButton.IsEnabled = false;
+                DeleteCustomComputerButton.IsEnabled = false;
+                AddPurchaseButton.IsEnabled = false;
+                DeletePurchaseButton.IsEnabled = false;
+            }
+           
+        }
+
 
 
 
@@ -87,12 +106,15 @@ namespace WPF_LoginForm.View
         {
             try
             {
+
+                if (!HasPermission()) return;
+
                 var grid = sender as System.Windows.Controls.DataGrid;
                 var editedItem = e.Row.Item as dynamic;
 
                 if (editedItem != null)
                 {
-                    _context.SaveChanges(); // Сохранение изменений в базу данных
+                    _context.SaveChanges(); 
                 }
             }
             catch (Exception ex)
@@ -101,9 +123,15 @@ namespace WPF_LoginForm.View
             }
         }
 
+
         // Добавление и удаление Поставщика
         private void AddSupplierButton_Click(object sender, RoutedEventArgs e)
         {
+            if (_currentUserRole == "Operator")
+            {
+                MessageBox.Show("У вас нет прав для добавления данных.", "Ошибка доступа", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
             var newSupplier = new Supplier
             {
                 CompanyName = "Новый поставщик",
@@ -120,6 +148,7 @@ namespace WPF_LoginForm.View
 
         private void DeleteSupplierButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             if (DataGridSuppliers.SelectedItem is Supplier selectedSupplier)
             {
                 _context.Suppliers.Remove(selectedSupplier);
@@ -135,7 +164,7 @@ namespace WPF_LoginForm.View
         // Добавление и удаление Продукта
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            if (!HasPermission()) return;
             var supplier = _context.Suppliers.FirstOrDefault(); 
 
             if (supplier != null)
@@ -161,6 +190,7 @@ namespace WPF_LoginForm.View
 
         private void DeleteProductButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             if (DataGridProducts.SelectedItem is Product selectedProduct)
             {
                 _context.Products.Remove(selectedProduct);
@@ -176,7 +206,8 @@ namespace WPF_LoginForm.View
         // Добавление и удаление Заказов
         private void AddOrderButton_Click(object sender, RoutedEventArgs e)
         {
-         
+            if (!HasPermission()) return;
+
             var customer = _context.Customers.FirstOrDefault(c => c.CustomerID >= 21 && c.CustomerID <= 30);
 
             if (customer != null)
@@ -201,6 +232,7 @@ namespace WPF_LoginForm.View
 
         private void DeleteOrderButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             if (DataGridOrders.SelectedItem is Order selectedOrder)
             {
                 _context.Orders.Remove(selectedOrder);
@@ -216,14 +248,15 @@ namespace WPF_LoginForm.View
         // Добавление и удаление Ремонтов
         private void AddRepairButton_Click(object sender, RoutedEventArgs e)
         {
-          
+            if (!HasPermission()) return;
+
             var product = _context.Products.FirstOrDefault(p => p.ProductID == 1);  
 
             if (product != null)
             {
                 var newRepair = new Repair
                 {
-                    ProductID = product.ProductID, // Assign the valid ProductID
+                    ProductID = product.ProductID, 
                     Description = "Новый ремонт",
                     RepairDate = DateTime.Now
                 };
@@ -240,6 +273,8 @@ namespace WPF_LoginForm.View
 
         private void DeleteRepairButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
+
             if (DataGridRepairs.SelectedItem is Repair selectedRepair)
             {
                 _context.Repairs.Remove(selectedRepair);
@@ -255,6 +290,8 @@ namespace WPF_LoginForm.View
         // Добавление и удаление Клиентов
         private void AddCustomerButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
+
             var newCustomer = new Customer
             {
                 FirstName = "Новый клиент",
@@ -270,6 +307,8 @@ namespace WPF_LoginForm.View
 
         private void DeleteCustomerButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
+
             if (DataGridCustomers.SelectedItem is Customer selectedCustomer)
             {
                 var relatedOrders = _context.Orders.Where(o => o.CustomerID == selectedCustomer.CustomerID).ToList();
@@ -302,6 +341,7 @@ namespace WPF_LoginForm.View
         // Добавление и удаление Контрактов
         private void AddContractButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             var newContract = new Contract
             {
                 SupplierID = 1,
@@ -316,6 +356,7 @@ namespace WPF_LoginForm.View
 
         private void DeleteContractButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             if (DataGridContracts.SelectedItem is Contract selectedContract)
             {
                 _context.Contracts.Remove(selectedContract);
@@ -435,31 +476,37 @@ namespace WPF_LoginForm.View
 
         private void AddEmployeeButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Работник добавлен!!");
         }
 
         private void DeleteEmployeeButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Работник удалён");
         }
 
         private void AddCustomComputerButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Кастомный компьютер добавлен added!");
         }
 
         private void DeleteCustomComputerButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Кастомный компьютер удалён!");
         }
 
         private void AddPurchaseButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Покупка добавлена!");
         }
 
         private void DeletePurchaseButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!HasPermission()) return;
             MessageBox.Show("Покупка удалена!");
         }
 

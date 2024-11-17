@@ -292,3 +292,5 @@ C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\WPF_Logi
 C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\WPF_LoginForm.Migrations.ModelChange.resources
 C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\WPF_LoginForm.Migrations.ModelUpdate.resources
 C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\WPF_LoginForm.Migrations.SupplierUpdate.resources
+C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\View\Window1.g.cs
+C:\Users\Justin\Desktop\CourseWorkRepo\C#(v2.0)\WPF-LoginForm\obj\Debug\View\Window1.baml

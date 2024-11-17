@@ -31,17 +31,34 @@ namespace WPF_LoginForm
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            if (HasAdminAccess())
+            if (_currentUserRole == "Admin" || _currentUserRole == "Owner")
             {
-                btnGoToAdminPanel.Visibility = Visibility.Visible;
+                btnGoToAdminPanel.Visibility = Visibility.Visible;  
             }
             else
             {
                 btnGoToAdminPanel.Visibility = Visibility.Collapsed;
             }
+
+            // Для роли "Operator" доступ только к просмотру данных
+            if (_currentUserRole == "Operator")
+            {
+                btnGoToViewTables.Visibility = Visibility.Visible;  
+                btnGoToAdminPanel.Visibility = Visibility.Collapsed;  
+            }
+            else if (_currentUserRole == "Guest")
+            {
+                btnGoToViewTables.Visibility = Visibility.Collapsed;  
+                btnGoToAdminPanel.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                
+                btnGoToViewTables.Visibility = Visibility.Visible;
+            }
         }
 
-        private void btnGoToAdminPanel_Click(object sender, RoutedEventArgs e)
+            private void btnGoToAdminPanel_Click(object sender, RoutedEventArgs e)
         {
             var adminPanelWindow = new AdminPanelWindow();
             adminPanelWindow.Show();
@@ -49,18 +66,19 @@ namespace WPF_LoginForm
         }
         private void btnGoToViewTables_Click(object sender, RoutedEventArgs e)
         {
-            if (_currentUserRole == "Admin" || _currentUserRole == "Owner") 
+            if (_currentUserRole == "Admin" || _currentUserRole == "Owner" || _currentUserRole == "Operator")
             {
-               
-                View.ViewTablesWindow tablesWindow = new View.ViewTablesWindow(_context, _currentUserName);
+                View.ViewTablesWindow tablesWindow = new View.ViewTablesWindow(_context, _currentUserRole); 
+
                 tablesWindow.Show();
             }
-            else
+            else if (_currentUserRole == "User")
             {
-                
                 MessageBox.Show("У вас нет прав для доступа к этому окну.", "Ошибка доступа", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
+
 
 
         public bool HasAdminAccess()

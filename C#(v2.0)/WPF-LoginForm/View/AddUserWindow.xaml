@@ -117,20 +117,20 @@
                 <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="20">
                     <!-- Поля для ввода -->
                     <TextBlock Text="Имя:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
-                    <TextBox x:Name="FirstNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1"/>
+                    <TextBox x:Name="FirstNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="White" BorderBrush="#DA34AE" BorderThickness="1" Text="" />
 
                     <TextBlock Text="Фамилия:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
-                    <TextBox x:Name="LastNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1"/>
+                    <TextBox x:Name="LastNameTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="White" BorderBrush="#DA34AE" BorderThickness="1"/>
 
                     <TextBlock Text="Электронная почта" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
-                    <TextBox x:Name="EmailTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1" />
+                    <TextBox x:Name="EmailTextBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="White" BorderBrush="#DA34AE" BorderThickness="1"/>
 
-                    <TextBlock Text="Роль:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
-                    <ComboBox x:Name="RoleComboBox" Width="400" Height="30" Background="#1B1448" Foreground="Black" BorderBrush="#DA34AE" BorderThickness="1" FontFamily="Montserrat">
-                        <ComboBoxItem Content="Admin"/>
-                        <ComboBoxItem Content="Operator"/>
-                        <ComboBoxItem Content="User"/>
-                    </ComboBox>
+                    <!-- Добавленные поля для пароля -->
+                    <TextBlock Text="Пароль:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <PasswordBox x:Name="PasswordBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="White" BorderBrush="#DA34AE" BorderThickness="1"/>
+
+                    <TextBlock Text="Подтверждение пароля:" Foreground="White" FontSize="16" FontFamily="Montserrat" Margin="0,10"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox" Width="400" Height="30" Margin="0,10" Background="#1B1448" Foreground="White" BorderBrush="#DA34AE" BorderThickness="1"/>
 
                     <!-- Кнопка добавления -->
                     <Button Content="Добавить" Width="200" Height="40" Background="#462AD8" Foreground="White" FontSize="14" FontFamily="Montserrat" Click="AddButton_Click" Margin="0,20"/>

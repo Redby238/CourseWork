@@ -12,7 +12,6 @@ namespace WPF_LoginForm.View
     {
         private ApplicationDbContext _context;
 
-        
         public event Action<ApplicationUser> UserAdded;
 
         public AddUserWindow()
@@ -24,13 +23,13 @@ namespace WPF_LoginForm.View
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-            
         }
 
         private void btnMinimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
         }
+
         private bool IsValidEmail(string email)
         {
             try
@@ -49,9 +48,10 @@ namespace WPF_LoginForm.View
             string firstName = FirstNameTextBox.Text;
             string lastName = LastNameTextBox.Text;
             string email = EmailTextBox.Text;
-            string role = (RoleComboBox.SelectedItem as ComboBoxItem)?.Content.ToString();
+            string password = PasswordBox.Password;
+            string confirmPassword = ConfirmPasswordBox.Password;
 
-            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(role))
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName) || string.IsNullOrEmpty(email) ||  string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля.");
                 return;
@@ -60,6 +60,12 @@ namespace WPF_LoginForm.View
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Пожалуйста, введите корректный email.");
+                return;
+            }
+
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Пароли не совпадают.");
                 return;
             }
 
@@ -75,8 +81,7 @@ namespace WPF_LoginForm.View
 
                 var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_context));
 
-                var result = userManager.Create(newUser, "Password123");
-
+                var result = userManager.Create(newUser, password);  
                 if (!result.Succeeded)
                 {
                     MessageBox.Show($"Ошибка при создании пользователя: {string.Join(", ", result.Errors)}");
@@ -84,8 +89,12 @@ namespace WPF_LoginForm.View
                 }
                 else
                 {
+                    // Добавляем роль пользователю
+                    userManager.AddToRole(newUser.Id, "User");
+
                     MessageBox.Show("Пользователь успешно добавлен!");
                 }
+
                 _context.SaveChanges();
             }
             catch (Exception ex)
@@ -93,6 +102,5 @@ namespace WPF_LoginForm.View
                 MessageBox.Show($"Ошибка: {ex.Message}");
             }
         }
-
     }
 }

@@ -22,8 +22,31 @@
                         <TextBox Name="FilterSuppliersTextBox" Width="200" Margin="5" TextChanged="FilterSuppliersTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddSupplierButton" Content="Добавить" Click="AddSupplierButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteSupplierButton" Content="Удалить" Click="DeleteSupplierButton_Click" Margin="5"/>
+                        <Button x:Name="AddSupplierButton" Content="Добавить" Click="AddSupplierButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <Button x:Name="DeleteSupplierButton" Content="Удалить" Click="DeleteSupplierButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridSuppliers" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -37,8 +60,31 @@
                         <TextBox Name="FilterProductsTextBox" Width="200" Margin="5" TextChanged="FilterProductsTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddProductButton" Content="Добавить" Click="AddProductButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteProductButton" Content="Удалить" Click="DeleteProductButton_Click" Margin="5"/>
+                        <Button x:Name="AddProductButton" Content="Добавить" Click="AddProductButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+
+                        <Button x:Name="DeleteProductButton" Content="Удалить" Click="DeleteProductButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridProducts" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -52,8 +98,30 @@
                         <TextBox Name="FilterOrdersTextBox" Width="200" Margin="5" TextChanged="FilterOrdersTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddOrderButton" Content="Добавить" Click="AddOrderButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteOrderButton" Content="Удалить" Click="DeleteOrderButton_Click" Margin="5"/>
+                        <Button x:Name="AddOrderButton" Content="Добавить" Click="AddOrderButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteOrderButton" Content="Удалить" Click="DeleteOrderButton_Click " Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridOrders" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -67,8 +135,30 @@
                         <TextBox Name="FilterRepairsTextBox" Width="200" Margin="5" TextChanged="FilterRepairsTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddRepairButton" Content="Добавить" Click="AddRepairButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteRepairButton" Content="Удалить" Click="DeleteRepairButton_Click" Margin="5"/>
+                        <Button x:Name="AddRepairButton" Content="Добавить" Click="AddRepairButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteRepairButton" Content="Удалить" Click="DeleteRepairButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridRepairs" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -82,8 +172,30 @@
                         <TextBox Name="FilterCustomersTextBox" Width="200" Margin="5" TextChanged="FilterCustomersTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddCustomerButton" Content="Добавить" Click="AddCustomerButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteCustomerButton" Content="Удалить" Click="DeleteCustomerButton_Click" Margin="5"/>
+                        <Button x:Name="AddCustomerButton" Content="Добавить" Click="AddCustomerButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteCustomerButton" Content="Удалить" Click="DeleteCustomerButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button> 
                     </StackPanel>
                     <DataGrid Name="DataGridCustomers" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -97,8 +209,30 @@
                         <TextBox Name="FilterContractsTextBox" Width="200" Margin="5" TextChanged="FilterContractsTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddContractButton" Content="Добавить" Click="AddContractButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteContractButton" Content="Удалить" Click="DeleteContractButton_Click" Margin="5"/>
+                        <Button x:Name="AddContractButton" Content="Добавить" Click="AddContractButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteContractButton" Content="Удалить" Click="DeleteContractButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridContracts" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -112,8 +246,30 @@
                         <TextBox Name="FilterEmployeesTextBox" Width="200" Margin="5" TextChanged="FilterEmployeesTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddEmployeeButton" Content="Добавить" Click="AddEmployeeButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteEmployeeButton" Content="Удалить" Click="DeleteEmployeeButton_Click" Margin="5"/>
+                        <Button x:Name="AddEmployeeButton" Content="Добавить" Click="AddEmployeeButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value=" True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteEmployeeButton" Content="Удалить" Click="DeleteEmployeeButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridEmployees" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -127,8 +283,30 @@
                         <TextBox Name="FilterCustomComputersTextBox" Width="200" Margin="5" TextChanged="FilterCustomComputersTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddCustomComputerButton" Content="Добавить" Click="AddCustomComputerButton_Click" Margin="5"/>
-                        <Button x:Name="DeleteCustomComputerButton" Content="Удалить" Click="DeleteCustomComputerButton_Click" Margin="5"/>
+                        <Button x:Name="AddCustomComputerButton" Content="Добавить" Click="AddCustomComputerButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeleteCustomComputerButton" Content="Удалить" Click="DeleteCustomComputerButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridCustomComputers" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>
@@ -142,8 +320,30 @@
                         <TextBox Name="FilterPurchasesTextBox" Width="200" Margin="5" TextChanged="FilterPurchasesTextBox_TextChanged"/>
                     </Grid>
                     <StackPanel Orientation="Horizontal" Margin="5">
-                        <Button x:Name="AddPurchaseButton" Content="Добавить" Click="AddPurchaseButton_Click" Margin="5"/>
-                        <Button x:Name="DeletePurchaseButton" Content="Удалить" Click="DeletePurchaseButton_Click" Margin="5"/>
+                        <Button x:Name="AddPurchaseButton" Content="Добавить" Click="AddPurchaseButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                        <Button x:Name="DeletePurchaseButton" Content="Удалить" Click="DeletePurchaseButton_Click" Margin="5">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="IsEnabled" Value="True" />
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding CurrentUserRole}" Value="Operator">
+                                            <Setter Property="IsEnabled" Value="False" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                        </Button>
                     </StackPanel>
                     <DataGrid Name="DataGridPurchases" AutoGenerateColumns="True" Margin="5"/>
                 </StackPanel>

@@ -175,6 +175,7 @@
                         <ComboBoxItem Content="Admin"/>
                         <ComboBoxItem Content="Operator"/>
                         <ComboBoxItem Content="User "/>
+                        <ComboBoxItem Content="Owner"/>
                     </ComboBox>
 
                     <Button Content="Назначить роль"
